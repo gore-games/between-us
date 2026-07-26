@@ -66,8 +66,16 @@ h5 {
     font-family: 'font', sans-serif;
 }
 
-h1, h2, h3, h4, p, span {
+h1, h2, h3, h4, p, span, a, button {
     font-family: 'font', sans-serif;
+}
+
+a {
+    font-size: x-large;
+}
+
+p {
+    font-size: x-large;
 }
 
 button {
@@ -98,113 +106,6 @@ button {
 }
 
 
-._1fjeuaf {
-    gap: min(calc(6vw / 3.5), calc(2560px * .06 / 3.5));
-    width: 100%;
-    scroll-margin-top: min(calc(10vw / 3.5), calc(2560px * .1 / 3.5));
-    grid-template-columns: [full-start] 1fr [full-end];
-    padding: 0 10vw;
-    place-content: flex-start;
-    align-items: flex-start;
-    margin: 0 auto;
-    display: grid;
-}
-
-._1gor0kq1 {
-    align-items: center;
-    gap: min(calc(8vw / 3.5), calc(2560px * .08 / 3.5));
-    width: 100%;
-    display: flex;
-}
-
-._1gor0kq2 {
-    color: #e5ddff;
-    gap: min(calc(3vw / 3.5), calc(2560px * .03 / 3.5));
-    flex-grow: 1;
-    align-items: center;
-    display: flex;
-}
-
-.l56esf0 {
-    letter-spacing: -.01em;
-    line-height: 1.2;
-}
-
-.l56esfj {
-    font-weight: 500;
-} 
-
-.l56esfg {
-    font-size: min(calc(8vw / 3.5), calc(2560px * .08 / 3.5));
-}
-
-.l56esfo {
-    text-wrap: balance;
-    -webkit-text-size-adjust: none;
-    font-feature-settings: unset !important;
-}
-
-.za06z14 {
-    padding: min(calc(1.5vw / 3.5), calc(2560px * .015 / 3.5));
-}
-
-.za06z12 {
-    background: #38365d;
-    color: #e5ddff;
-}
-
-
-.za06z10 {
-    text-overflow: ellipsis;
-    white-space: break-spaces;
-    text-wrap: nowrap;
-    border-radius: 4px;
-    -webkit-box-orient: vertical;
-    justify-content: center;
-    align-items: center;
-    display: -webkit-box;
-    overflow: hidden;
-}
-
-.l56esf20 {
-    letter-spacing: .025em;
-}
-
-
-.l56esf1m {
-    font-size: min(calc(3.5vw / 3.5), calc(2560px * .035 / 3.5));
-}
-
-
-.l56esf1j {
-    text-transform: uppercase;
-    line-height: 1;
-}
-
-
-@media (min-width: 768px) {
-    ._1gor0kq5 {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-
-
-._16udq120 {
-    background: var(--_1nfc5st7g);
-    box-sizing: border-box;
-    cursor: pointer;
-    border-radius: var(--_19z1c6df);
-    align-content: start;
-    transition: background-color .15s ease-in-out;
-    display: grid;
-    overflow: hidden;
-}
-
-
-.ic6qv70 {
-    all: unset;
-}
 </style>
 
 
@@ -425,22 +326,106 @@ button {
 
 
 
-<!-- test 
 
 
-<section class="py-36 flex items-center justify-center">
 
-        <img src="img/7.png" class="img-fluid border-t-[5px] border-b-[5px] border-[#c31919]">
+
+
+
+
+
+
+
+<!-- SHOP -->
+<section class="max-w-7xl mx-auto px-6 py-24">
+
+    <div class="flex items-center gap-4 mb-10">
+
+        <h2 class="text-5xl font-[font] text-white">
+            Shop
+        </h2>
+
+        <span
+            class="flex items-center justify-center rounded-md bg-[#4A467D] px-3 py-2 text-white text-xl">
+            2
+        </span>
+
+    </div>
+
+    <!-- Cards -->
+    <div class="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+
+
+
+        <div class="overflow-hidden rounded-[30px] bg-[#2B294B]">
+
+            <div class="overflow-hidden">
+                <img
+                    src="img/shop_1_blur.png" class="h-72 w-full object-cover transition duration-500 hover:scale-105">
+            </div>
+
+            <div class="p-7">
+                <h3 class="text-3xl font-bold text-white">
+                    Jenny Wallpaper Pack
+                </h3>
+                <p class="mt-2 text-gray-300">
+                    3840×2160
+                </p>
+                <div class="mt-6 flex items-center justify-between">
+
+                    <span class="text-3xl font-bold text-pink-300">
+                        £4.49
+                    </span>
+                    <a
+                        href="https://www.patreon.com/goregames/posts/jenny-wallpapers-164922227?source=storefront" target="_blank" class="rounded-full bg-pink-600 px-9 py-3 font-semibold transition hover:scale-105 hover:bg-pink-300 hover:text-black">
+                        Buy
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <div class="overflow-hidden rounded-[30px] bg-[#2B294B]">
+
+            <div class="overflow-hidden">
+                <img
+                    src="img/shop_2_blur.png" class="h-72 w-full object-cover transition duration-500 hover:scale-105">
+            </div>
+
+            <div class="p-7">
+                <h3 class="text-3xl font-bold text-white">
+                    Between Us Wallpaper Pack
+                </h3>
+                <p class="mt-2 text-gray-300">
+                    3840×2160
+                </p>
+                <div class="mt-6 flex items-center justify-between">
+
+                    <span class="text-3xl font-bold text-pink-300">
+                        £3.49
+                    </span>
+                    <a
+                        href="https://www.patreon.com/goregames/posts/between-us-164919172?source=storefront" target="_blank" class="rounded-full bg-pink-600 px-9 py-3 font-semibold transition hover:scale-105 hover:bg-pink-300 hover:text-black">
+                        Buy
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
 
 </section>
-
-<section class="py-36 flex items-center justify-center">
-
-        <img src="img/gg04Va.png" class="img-fluid border-t-[5px] border-b-[5px] border-[#c31919]">
-
-</section>
-
--->
 
 
 
@@ -451,14 +436,12 @@ button {
     id="lightbox"
     class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-sm flex items-center justify-center p-8">
 
-    <!-- Close Button -->
     <button
         onclick="closeImage()"
         class="absolute top-6 right-6 text-white text-5xl hover:text-pink-300 transition">
         &times;
     </button>
 
-    <!-- Image -->
     <img
         id="lightboxImage"
         class="max-w-full max-h-full rounded-xl shadow-2xl object-contain">
@@ -469,36 +452,10 @@ button {
 
 
 
-
-
-
-<!--
-<div class="flex relative inline-block justify-center" style="transform: translateY(-500px);">
-
-    <img
-        src="img/hnv8bs.png"
-        class="img-fluid border-[3px] border-[#c31919]" style="border-radius: 20px;">
-
-    <div class="absolute inset-0 flex items-center justify-center">
-
-        <p class="text-2xl text-center font-black text-white drop-shadow-lg" style="transform:translateX(315px) translateY(-10px)">
-            You play as Tony,  will you help Felicia's relationship
-        </p>
-        <p class="text-2xl font-black" style="transform: translateX(-125px) translateY(20px);">
-            or will you try and ruin it?
-        </p>
-
-    </div>
-
-</div>
--->
-
-
-
 <div class="flex mb-1 justify-center text-sm text-slate-400 mt-6" style="transform: translateY(-40px);">
-    <p class="copy">
+    <span class="copy">
       &copy; 2026 Gore Games. All rights reserved.
-    </p>
+    </span>
 </div>
 
 
