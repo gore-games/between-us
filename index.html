@@ -62,7 +62,9 @@ tailwind.config = {
   animation: fadeIn 1s ease-in forwards;
 }
 
-
+h5 {
+    font-family: 'font', sans-serif;
+}
 
 h1, h2, h3, h4, p, span {
     font-family: 'font', sans-serif;
@@ -76,7 +78,10 @@ button {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
+::selection{
+    background: #ca6d6d;
+    color: #000;
+}
 
 .gihvh7c {
     z-index: -1;
@@ -92,6 +97,114 @@ button {
     transform: translate(-50%, -5%);
 }
 
+
+._1fjeuaf {
+    gap: min(calc(6vw / 3.5), calc(2560px * .06 / 3.5));
+    width: 100%;
+    scroll-margin-top: min(calc(10vw / 3.5), calc(2560px * .1 / 3.5));
+    grid-template-columns: [full-start] 1fr [full-end];
+    padding: 0 10vw;
+    place-content: flex-start;
+    align-items: flex-start;
+    margin: 0 auto;
+    display: grid;
+}
+
+._1gor0kq1 {
+    align-items: center;
+    gap: min(calc(8vw / 3.5), calc(2560px * .08 / 3.5));
+    width: 100%;
+    display: flex;
+}
+
+._1gor0kq2 {
+    color: #e5ddff;
+    gap: min(calc(3vw / 3.5), calc(2560px * .03 / 3.5));
+    flex-grow: 1;
+    align-items: center;
+    display: flex;
+}
+
+.l56esf0 {
+    letter-spacing: -.01em;
+    line-height: 1.2;
+}
+
+.l56esfj {
+    font-weight: 500;
+} 
+
+.l56esfg {
+    font-size: min(calc(8vw / 3.5), calc(2560px * .08 / 3.5));
+}
+
+.l56esfo {
+    text-wrap: balance;
+    -webkit-text-size-adjust: none;
+    font-feature-settings: unset !important;
+}
+
+.za06z14 {
+    padding: min(calc(1.5vw / 3.5), calc(2560px * .015 / 3.5));
+}
+
+.za06z12 {
+    background: #38365d;
+    color: #e5ddff;
+}
+
+
+.za06z10 {
+    text-overflow: ellipsis;
+    white-space: break-spaces;
+    text-wrap: nowrap;
+    border-radius: 4px;
+    -webkit-box-orient: vertical;
+    justify-content: center;
+    align-items: center;
+    display: -webkit-box;
+    overflow: hidden;
+}
+
+.l56esf20 {
+    letter-spacing: .025em;
+}
+
+
+.l56esf1m {
+    font-size: min(calc(3.5vw / 3.5), calc(2560px * .035 / 3.5));
+}
+
+
+.l56esf1j {
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+
+@media (min-width: 768px) {
+    ._1gor0kq5 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+
+._16udq120 {
+    background: var(--_1nfc5st7g);
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius: var(--_19z1c6df);
+    align-content: start;
+    transition: background-color .15s ease-in-out;
+    display: grid;
+    overflow: hidden;
+}
+
+
+.ic6qv70 {
+    all: unset;
+}
 </style>
 
 
@@ -139,6 +252,7 @@ button {
     </div>
 
 </header>
+
 
 <!-- Hero -->
 
@@ -219,7 +333,7 @@ button {
     <!-- Arrow -->
 
     <button
-        onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})"
+        onclick="document.getElementById('screenshots').scrollIntoView({behavior:'smooth'})"
         class="mt-4 text-5xl text-gray-300 transition hover:scale-110">
 
         <svg width="34" height="14" viewBox="0 0 34 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 1.4196px, 0px) scale(0.9645, 0.9645); opacity: 0.8935; visibility: inherit;"><path fill-rule="evenodd" clip-rule="evenodd" d="M33.5609 1.54346C34.0381 2.5875 33.6881 3.87821 32.7791 4.42633L17.0387 13.9181L1.48663 4.42115C0.580153 3.86761 0.235986 2.57483 0.717909 1.53365C1.19983 0.492464 2.32535 0.097152 3.23182 0.650692L17.0497 9.08858L31.051 0.64551C31.96 0.0973872 33.0837 0.499411 33.5609 1.54346Z" fill="currentColor"></path></svg>
@@ -228,13 +342,134 @@ button {
 
 </section>
 
-<!-- About -->
+<!-- Screenshots -->
+<div id="screenshots"></div>
 
-<div id="about" class="py-36 items-center" style="align-content: center; justify-items: center;" >
+<div class="max-w-7xl mx-auto px-8 py-12">
+    <div class="flex items-center justify-between mb-10">
+        <div class="flex items-center gap-4">
+            <h1 class="text-5xl">
+                Screenshots
+            </h1>
+
+            <span
+                class="mt-1 flex items-center justify-center bg-[#373464] px-3 py-2 rounded-md text-xl">
+                3
+            </span>
+        </div>
+
+        <!-- <button class="flex items-center gap-3 font-[font] text-red-300 hover:text-white transition" href="https://google.com/">
+            Download All
+
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 4v12m0 0l-5-5m5 5l5-5M5 20h14"/>
+            </svg>
+        </button> -->
+    </div>
+
+    <!-- Gallery -->
+
+    <div class="grid gap-6 lg:grid-cols-3 md:grid-cols-2">
+
+        <!-- Card -->
+        <div class="rounded-3xl overflow-hidden bg-[#2a2948] group cursor-pointer">
+            <div class="overflow-hidden" onclick="openImage('/img/gg04Va.png')">
+                <img src="/img/gg04Va.png" class="w-full h-72 object-cover group-hover:scale-105 transition duration-500">
+            </div>
+
+            <div class="p-6">
+                <h2 class="text-3xl font-bold">
+                    Felicia 01
+                </h2>
+                <p class="text-gray-300 mt-2">
+                    1 size
+                </p>
+            </div>
+        </div>
+
+        <div class="rounded-3xl overflow-hidden bg-[#2a2948] group cursor-pointer">
+            <div class="overflow-hidden" onclick="openImage('/img/7.png')">
+                <img src="/img/7.png" class="w-full h-72 object-cover group-hover:scale-105 transition duration-500">
+            </div>
+
+            <div class="p-6">
+                <h2 class="text-3xl font-bold">
+                    Felicia 02
+                </h2>
+                <p class="text-gray-300 mt-2">
+                    1 size
+                </p>
+            </div>
+        </div>
+
+
+        <div class="rounded-3xl overflow-hidden bg-[#2a2948] group cursor-pointer">
+            <div class="overflow-hidden" onclick="openImage('/img/3dif83d.png')">
+                <img src="/img/3dif83d.png" class="w-full h-72 object-cover group-hover:scale-105 transition duration-500">
+            </div>
+
+            <div class="p-6">
+                <h2 class="text-3xl font-bold">
+                    Alex 01
+                </h2>
+                <p class="text-gray-300 mt-2">
+                    1 size
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- test 
+
+
+<section class="py-36 flex items-center justify-center">
 
         <img src="img/7.png" class="img-fluid border-t-[5px] border-b-[5px] border-[#c31919]">
 
+</section>
+
+<section class="py-36 flex items-center justify-center">
+
+        <img src="img/gg04Va.png" class="img-fluid border-t-[5px] border-b-[5px] border-[#c31919]">
+
+</section>
+
+-->
+
+
+
+
+
+
+<div
+    id="lightbox"
+    class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-sm flex items-center justify-center p-8">
+
+    <!-- Close Button -->
+    <button
+        onclick="closeImage()"
+        class="absolute top-6 right-6 text-white text-5xl hover:text-pink-300 transition">
+        &times;
+    </button>
+
+    <!-- Image -->
+    <img
+        id="lightboxImage"
+        class="max-w-full max-h-full rounded-xl shadow-2xl object-contain">
+
 </div>
+
+
+
+
+
+
 
 
 <!--
@@ -260,7 +495,7 @@ button {
 
 
 
-<div class="flex mb-1 justify-center text-sm text-slate-400 mt-6" style="transform: translateY(-110px);">
+<div class="flex mb-1 justify-center text-sm text-slate-400 mt-6" style="transform: translateY(-40px);">
     <p class="copy">
       &copy; 2026 Gore Games. All rights reserved.
     </p>
@@ -305,6 +540,43 @@ window.addEventListener("load", () => {
     }, 300);
 
 });
+
+
+
+
+
+
+
+
+
+
+
+const lightbox = document.getElementById("lightbox");
+const image = document.getElementById("lightboxImage");
+
+function openImage(src) {
+    image.src = src;
+    lightbox.classList.remove("hidden");
+    document.body.classList.add("overflow-hidden");
+}
+
+function closeImage() {
+    lightbox.classList.add("hidden");
+    document.body.classList.remove("overflow-hidden");
+}
+
+lightbox.addEventListener("click", e => {
+    if (e.target === lightbox)
+        closeImage();
+});
+
+document.addEventListener("keydown", e => {
+    if (e.key === "Escape")
+        closeImage();
+});
+
+
+
 
 </script>
 
