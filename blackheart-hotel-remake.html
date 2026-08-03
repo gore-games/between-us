@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+<title>BHH:RE | Gore Games</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<script>
+
+tailwind.config = {
+    theme: {
+        extend: {
+            colors: {
+                bg: "#171717",
+                accent: "#F4B8CC",
+                plybtn: "#1a1a1a",
+                cmgsn: "#111111",
+                border: "#C31919"
+            }
+        }
+    }
+}
+</script>
+</head>
+
+
+<style>
+ 
+
+@font-face {
+    font-family: "font";
+    display: swap;
+    src: url(font.woff);
+}
+
+@font-face {
+    font-family: "font2";
+    display: swap;
+    src: url(font2.woff);
+}
+
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+    @keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.animate-fadeIn {
+  animation: fadeIn 1s ease-in forwards;
+}
+
+h5 {
+    font-family: 'font', sans-serif;
+}
+
+h1, h2, h3, h4, p, span, a, button {
+    font-family: 'font', sans-serif;
+}
+
+a {
+    font-size: x-large;
+}
+
+p {
+    font-size: x-large;
+}
+
+button {
+    font-family: 'font2', sans-serif;
+}
+
+.copy {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+::selection{
+    background: #797878;
+    color: #000;
+}
+
+.gihvh7c {
+    z-index: -1;
+    background: radial-gradient(100% 50% at 50% 50%, #1f0607 0%, transparent 90%);
+    opacity: 1;
+    pointer-events: none;
+    border-radius: 1000px;
+    width: 200vw;
+    height: 200svh;
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    transform: translate(-50%, -5%);
+}
+
+#figure {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+}
+
+.img {
+    display: inline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+
+<body class="bg-bg text-white overflow-x-hidden">
+
+
+
+
+
+<div id="loader" class="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[#121212]">
+
+    <img
+        src="img/gore_games_official_logo_EST2023.png"
+        class="w-56 animate-pulse">
+
+    <div class="mt-10 h-2 w-72 overflow-hidden rounded-full bg-white/10">
+
+        <div id="progress"
+        class="h-full w-0 rounded-full bg-red-300 transition-all duration-300"></div>
+
+    </div>
+
+    <p id="loadingText"
+    class="mt-6 text-lg tracking-[0.35em] uppercase text-gray-400">
+
+        Loading...
+
+    </p>
+
+</div>    
+
+    <div id="page" class="opacity-0 translate-y-8 transition-all duration-700">
+
+<!-- Navbar
+<nav class="navbar bg-none">
+  <div class="container-fluid">
+    <img src="img/BetweenUs_Logo_GOREGAMES.png" class="h-16">
+    <img src="img/gore_games_official_logo_EST2023.png" class="h-16">
+  </div>
+</nav>
+-->
+
+<header class="absolute inset-x-0 top-0 z-50">
+    <div class="mx-auto flex items-center justify-between sm:justify-start gap-3 sm:gap-6 px-4 py-4 sm:px-10 sm:py-8">
+
+        <a href="/blackheart-hotel-remake" class="bg-border hover:bg-black hover:text-white p-2 rounded-xl duration-300 transition">BLACKHEART HOTEL: REMAKE</a>
+
+                <!-- Divider -->
+        <div class="h-6 sm:h-10 w-px bg-gray-500/50"></div>
+        
+        <!-- Logo 1 -->
+    <a href="/index">
+    <img src="img/BetweenUs_Logo_GOREGAMES.png" class="h-8 sm:h-16 md:h-20 w-auto object-contain" alt="GOREGAMES Logo"></a>
+
+
+
+        
+
+
+
+    </div>
+</header>
+
+
+
+
+
+<!-- Hero -->
+
+<section class="flex flex-col min-h-screen items-center justify-center px-6 pt-32" style="width:auto">
+
+    <!-- Artwork -->
+
+    <img
+        src="img/bhh-re.png"
+        class="w-full max-w-5xl border-[7px] border-[#000] shadow-2xl">
+
+    <!-- Bottom -->
+
+    <div class="mt-4 grid w-full max-w-5xl grid-cols-3 items-center">
+
+        <!-- Left -->
+
+        <div>
+
+            <p class="text-3xl uppercase tracking-wide">
+
+                COMING
+
+            </p>
+
+            <h2 class="text-3xl leading-none">
+
+                SOON
+
+            </h2>
+
+        </div>
+
+        <!-- Center -->
+
+        <div class="flex justify-center">
+
+            <!-- <button
+                class="rounded-full bg-plybtn px-14 py-5 font-[font2] text-3xl text-[#2E0606] transition duration-300 hover:text-[#ff0000] hover:bg-[#fff] hover:shadow-[0_0_10px_rgba(255,255,255.15)]">
+
+                Coming Soon
+
+            </button> -->
+
+            <span
+                class="rounded-full bg-cmgsn px-14 py-4 font-[font2] text-3xl text-slate-400 transition duration-300 cursor-not-allowed select-none hover:bg-[#242424]" aria-disabled="true">
+                Coming Soon
+            </span>
+        </div>
+
+        <!-- Right -->
+
+        <div class="flex flex-col items-end gap-1 text-2xl select-none">
+
+            <div class="flex items-center gap-3">
+
+                <i class="fa-brands fa-windows"></i>
+
+                Windows
+
+            </div>
+
+            <div class="flex items-center gap-3">
+
+                <i class="fa-brands fa-apple"></i>
+
+                MacOS
+
+            </div>
+
+
+            <div class="flex items-center gap-3">
+
+                <i class="fa-brands fa-android"></i>
+
+                Android
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Arrow -->
+
+    <button
+        onclick="document.getElementById('blockquote').scrollIntoView({behavior:'smooth'})"
+        class="mt-4 text-5xl text-gray-300 transition hover:scale-110 animate-bounce">
+
+        <svg width="34" height="14" viewBox="0 0 34 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 1.4196px, 0px) scale(0.9645, 0.9645); opacity: 0.8935; visibility: inherit;"><path fill-rule="evenodd" clip-rule="evenodd" d="M33.5609 1.54346C34.0381 2.5875 33.6881 3.87821 32.7791 4.42633L17.0387 13.9181L1.48663 4.42115C0.580153 3.86761 0.235986 2.57483 0.717909 1.53365C1.19983 0.492464 2.32535 0.097152 3.23182 0.650692L17.0497 9.08858L31.051 0.64551C31.96 0.0973872 33.0837 0.499411 33.5609 1.54346Z" fill="currentColor"></path></svg>
+
+    </button>
+
+</section>
+
+
+
+<blockquote id="blockquote" class="text-center text-5xl text-white font-[font] dark:text-white py-24">
+  The
+  <span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-3 before:bg-[#000]">
+    <span class="relative text-white dark:text-gray-950">remake</span>
+  </span>
+  to the original Blackheart Hotel.
+</blockquote>
+
+
+
+<!-- Screenshots -->
+<div id="screenshots"></div>
+
+<div class="max-w-7xl mx-auto px-8 py-12">
+    <div class="flex items-center justify-between mb-10">
+        <div class="flex items-center gap-4">
+            <h1 class="text-5xl font-bold">
+                Screenshots
+            </h1>
+
+            <span class="mt-1 flex items-center justify-center bg-[#000] px-3 py-2 rounded-md text-xl">
+                8
+            </span>
+        </div>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div id="gallery-grid" class="grid gap-6 lg:grid-cols-3 md:grid-cols-2">
+
+        <div class="rounded-3xl overflow-hidden bg-[#000] group cursor-pointer">
+            <div class="overflow-hidden" onclick="openImage('img/4d59soe.png')">
+                <img src="img/4d59soe.png" class="w-full h-72 object-cover group-hover:scale-105 transition duration-500">
+            </div>
+            <div class="p-6">
+                <h2 class="text-3xl font-bold">Jacky & Chan</h2>
+                <p class="text-gray-300 mt-2">1 size</p>
+            </div>
+        </div>
+
+        <div class="rounded-3xl overflow-hidden bg-[#000] group cursor-pointer">
+            <div class="overflow-hidden" onclick="openImage('img/4d39dsv.png')">
+                <img src="img/4d39dsv.png" class="w-full h-72 object-cover group-hover:scale-105 transition duration-500">
+            </div>
+            <div class="p-6">
+                <h2 class="text-3xl font-bold">Jacky, Paige & Isabella</h2>
+                <p class="text-gray-300 mt-2">1 size</p>
+            </div>
+        </div>
+
+        <div class="rounded-3xl overflow-hidden bg-[#000] group cursor-pointer">
+            <div class="overflow-hidden" onclick="openImage('img/4d49src.png')">
+                <img src="img/4d49src.png" class="w-full h-72 object-cover group-hover:scale-105 transition duration-500">
+            </div>
+            <div class="p-6">
+                <h2 class="text-3xl font-bold">Ava 01</h2>
+                <p class="text-gray-300 mt-2">1 size</p>
+            </div>
+        </div>
+
+
+        <div class="extra-card hidden rounded-3xl overflow-hidden bg-[#000] group cursor-pointer">
+            <div class="overflow-hidden" onclick="openImage('img/4c57fjn.png')">
+                <img src="img/4c57fjn.png" class="w-full h-72 object-cover group-hover:scale-105 transition duration-500">
+            </div>
+            <div class="p-6">
+                <h2 class="text-3xl font-bold">Candy 01</h2>
+                <p class="text-gray-300 mt-2">1 size</p>
+            </div>
+        </div>
+
+
+        <div class="extra-card hidden rounded-3xl overflow-hidden bg-[#000] group cursor-pointer">
+            <div class="overflow-hidden" onclick="openImage('img/4c382sg.png')">
+                <img src="img/4c382sg.png" class="w-full h-72 object-cover group-hover:scale-105 transition duration-500">
+            </div>
+            <div class="p-6">
+                <h2 class="text-3xl font-bold">Stacy & Jacky</h2>
+                <p class="text-gray-300 mt-2">1 size</p>
+            </div>
+        </div>
+
+        <div class="extra-card hidden rounded-3xl overflow-hidden bg-[#000] group cursor-pointer">
+            <div class="overflow-hidden" onclick="openImage('img/34dari3.png')">
+                <img src="img/34dari3.png" class="w-full h-72 object-cover group-hover:scale-105 transition duration-500">
+            </div>
+            <div class="p-6">
+                <h2 class="text-3xl font-bold">Jacky 01</h2>
+                <p class="text-gray-300 mt-2">1 size</p>
+            </div>
+        </div>
+
+        <div class="extra-card hidden rounded-3xl overflow-hidden bg-[#000] group cursor-pointer">
+            <div class="overflow-hidden" onclick="openImage('img/33fehw5.png')">
+                <img src="img/33fehw5.png" class="w-full h-72 object-cover group-hover:scale-105 transition duration-500">
+            </div>
+            <div class="p-6">
+                <h2 class="text-3xl font-bold">Jacky 02</h2>
+                <p class="text-gray-300 mt-2">1 size</p>
+            </div>
+        </div>
+
+        <div class="extra-card hidden rounded-3xl overflow-hidden bg-[#000] group cursor-pointer">
+            <div class="overflow-hidden" onclick="openImage('img/grace_BHHR.png')">
+                <img src="img/grace_BHHR.png" class="w-full h-72 object-cover group-hover:scale-105 transition duration-500">
+            </div>
+            <div class="p-6">
+                <h2 class="text-3xl font-bold">Grace 01</h2>
+                <p class="text-gray-300 mt-2">1 size</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="mt-8 text-center">
+        <button id="toggle-btn" onclick="toggleScreenshots()" class="bg-border hover:bg-red-300 hover:text-black font-[font] text-xl py-3 px-8 rounded-full transition duration-300">
+            Show More
+        </button>
+    </div>
+</div>
+
+<script>
+    function toggleScreenshots() {
+        const extraCards = document.querySelectorAll('.extra-card');
+        const btn = document.getElementById('toggle-btn');
+        let isHidden = false;
+
+        extraCards.forEach(card => {
+            card.classList.toggle('hidden');
+            if (card.classList.contains('hidden')) {
+                isHidden = true;
+            }
+        });
+        btn.innerText = isHidden ? 'Show More' : 'Show Less';
+    }
+</script>
+
+
+
+
+
+<div
+    id="lightbox"
+    class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-sm flex items-center justify-center p-8">
+
+    <button
+        onclick="closeImage()"
+        class="absolute top-6 right-6 text-white text-5xl hover:text-pink-300 transition">
+        &times;
+    </button>
+
+    <img
+        id="lightboxImage"
+        class="max-w-full max-h-full rounded-xl shadow-2xl object-contain">
+
+</div>
+
+
+
+
+
+
+
+
+
+<footer class="py-20">
+
+    <!-- Logo -->
+    <div class="flex justify-center mb-12">
+        <img
+            src="img/gore_games_official_logo_EST2023.png"
+            alt="Gore Games"
+            class="w-64 md:w-72 lg:w-80 h-auto select-none">
+    </div>
+
+    <!-- Copyright -->
+    <p class="text-center text-md text-gray-400">
+        © 2026 Black Lightning. Co-developed with Gore Games. All rights reserved. XX-VII-MMXXIII
+    </p>
+
+
+</footer>
+
+
+
+
+
+
+
+
+
+
+<script>
+
+const loader = document.getElementById("loader");
+const page = document.getElementById("page");
+const progress = document.getElementById("progress");
+
+let value = 0;
+
+const interval = setInterval(() => {
+    value = Math.min(value + 4, 95);
+    progress.style.width = value + "%";
+}, 50);
+
+window.addEventListener("load", () => {
+
+    clearInterval(interval);
+    progress.style.width = "100%";
+
+    setTimeout(() => {
+
+        loader.classList.add("opacity-0");
+        loader.style.transition = "opacity .8s";
+
+        setTimeout(() => {
+
+            loader.remove();
+
+            page.classList.remove("opacity-0", "translate-y-8");
+
+        }, 1600);
+
+    }, 300);
+
+});
+
+
+
+const lightbox = document.getElementById("lightbox");
+const image = document.getElementById("lightboxImage");
+
+function openImage(src) {
+    image.src = src;
+    lightbox.classList.remove("hidden");
+    document.body.classList.add("overflow-hidden");
+}
+
+function closeImage() {
+    lightbox.classList.add("hidden");
+    document.body.classList.remove("overflow-hidden");
+}
+
+lightbox.addEventListener("click", e => {
+    if (e.target === lightbox)
+        closeImage();
+});
+
+document.addEventListener("keydown", e => {
+    if (e.key === "Escape")
+        closeImage();
+});
+
+
+</script>
+
+
+
+<script>
+  window.addEventListener('scroll', function() {
+    const scrollPosition = window.scrollY;
+    const fadeOutLimit = 350; 
+
+    let opacity = 1 - (scrollPosition / fadeOutLimit);
+    if (opacity < 0) opacity = 0;
+    
+    const arrowButton = document.querySelector('button.mt-4.text-5xl');
+    if (arrowButton) {
+      arrowButton.style.opacity = opacity;
+      arrowButton.style.pointerEvents = opacity === 0 ? 'none' : 'auto';
+    }
+  });
+</script>
