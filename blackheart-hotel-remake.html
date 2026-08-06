@@ -178,25 +178,110 @@ button {
 -->
 
 <header class="absolute inset-x-0 top-0 z-50">
-    <div class="mx-auto flex items-center justify-between sm:justify-start gap-3 sm:gap-6 px-4 py-4 sm:px-10 sm:py-8">
-
-        <a href="/blackheart-hotel-remake" class="bg-border hover:bg-black hover:text-white p-2 rounded-xl duration-300 transition">BLACKHEART HOTEL: REMAKE</a>
-
-                <!-- Divider -->
-        <div class="h-6 sm:h-10 w-px bg-gray-500/50"></div>
+    <div class="mx-auto flex items-center justify-between px-4 py-4 sm:px-10 sm:py-8 w-full">
         
-        <!-- Logo 1 -->
-    <a href="/">
-    <img src="img/BetweenUs_Logo_GOREGAMES.png" class="h-8 sm:h-16 md:h-20 w-auto object-contain" alt="GOREGAMES Logo"></a>
+        <!-- Left Side: Logos & Links -->
+        <div class="flex items-center gap-3 sm:gap-6">
+            <a href="/blackheart-hotel-remake" class="hidden md:block bg-border hover:bg-black hover:text-white p-2 rounded-xl duration-300 transition">BLACKHEART HOTEL: REMAKE</a>
+            <!-- Logo 1 -->
+            <!-- Divider -->
+            <div class="h-6 sm:h-10 w-px bg-gray-500/50"></div>
+            <a href="/"><img src="img/BetweenUs_Logo_GOREGAMES.png" class="h-8 sm:h-16 md:h-20 w-auto object-contain"></a>
 
 
+        </div>
 
-        
-
-
+        <!-- Right Side: Hamburger Button (Explicit ID) -->
+        <button id="menuOpenBtn" type="button" class="relative z-50 text-white hover:text-red-400 transition duration-300 p-2 cursor-pointer">
+            <i class="fa-solid fa-bars text-3xl sm:text-4xl"></i>
+        </button>
 
     </div>
 </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Off-Page Navigation Drawer Container -->
+<div id="navWrapper" class="fixed inset-0 z-[10000] pointer-events-none">
+    
+    <!-- Blurred Backdrop Overlay -->
+    <div id="navBackdrop" class="absolute inset-0 bg-black/60 backdrop-blur-md opacity-0 transition-opacity duration-500 cursor-pointer"></div>
+
+    <!-- Half-Screen Navigation Drawer Panel -->
+    <div id="navOverlay" class="absolute top-0 right-0 h-full w-full sm:w-3/4 md:w-1/2 lg:w-2/5 bg-[#11131c]/95 border-l border-white/10 translate-x-full transition-transform duration-500 ease-in-out flex flex-col shadow-2xl overflow-hidden">
+        
+        <!-- Overlay Header -->
+        <div class="flex justify-between items-center px-6 py-6 sm:px-8 sm:py-8 shrink-0">
+            <div class="flex items-center gap-3 opacity-90">
+                <img src="img/gore_games_official_logo_EST2023.png" class="h-10 w-auto object-contain">
+                <div class="h-6 w-px bg-gray-500/50"></div>
+                <span class="text-lg font-[font] tracking-widest text-white uppercase">Gore Games</span>
+            </div>
+            
+            <button id="menuCloseBtn" type="button" class="bg-[#2B294B] hover:bg-border text-[#b3b8dd] hover:text-white w-10 h-10 rounded-full flex items-center justify-center text-xl transition duration-300 cursor-pointer">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <!-- Sliding Panels Container -->
+        <div class="relative flex-1 w-full overflow-hidden">
+
+            <!-- PANEL 1: MAIN MENU -->
+            <div id="mainPanel" class="absolute inset-0 flex flex-col justify-center px-6 sm:px-10 pb-16 transition-transform duration-500 ease-in-out">
+                <ul class="flex flex-col gap-3 sm:gap-5">
+                    <li><a href="/" class="text-[#fffbbf] text-3xl sm:text-5xl font-[font] uppercase hover:text-white transition block">HOME</a></li>
+                    <li>
+                        <button id="openMediaBtn" type="button" class="w-full text-[#b3b8dd] text-3xl sm:text-5xl font-[font] uppercase hover:text-white transition flex items-center justify-between group text-left cursor-pointer">
+                            MEDIA <i class="fa-solid fa-chevron-right text-2xl sm:text-3xl opacity-70 group-hover:opacity-100 transition"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- PANEL 2: MEDIA SUB-MENU -->
+            <div id="mediaPanel" class="absolute inset-0 flex flex-col justify-center px-6 sm:px-10 pb-16 translate-x-full transition-transform duration-500 ease-in-out">
+                <button id="backToMainBtn" type="button" class="flex items-center gap-3 text-red-400 hover:text-white text-xl font-[font] tracking-wider mb-6 transition group cursor-pointer">
+                    <i class="fa-solid fa-chevron-left text-base group-hover:-translate-x-1 transition-transform"></i> BACK
+                </button>
+
+                <h2 class="text-white text-4xl sm:text-6xl font-[font] uppercase mb-6 pb-2 border-b border-white/10">MEDIA</h2>
+
+                <ul class="flex flex-col gap-3 sm:gap-4">
+                    <li><a href="/screenshots" class="text-[#b3b8dd] text-2xl sm:text-4xl font-[font] uppercase hover:text-[#fffbbf] transition block">SCREENSHOTS</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -572,3 +657,83 @@ document.addEventListener("keydown", e => {
     }
   });
 </script>
+
+
+
+
+
+
+
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const menuOpenBtn = document.getElementById('menuOpenBtn');
+        const menuCloseBtn = document.getElementById('menuCloseBtn');
+        const navWrapper = document.getElementById('navWrapper');
+        const navBackdrop = document.getElementById('navBackdrop');
+        const navOverlay = document.getElementById('navOverlay');
+
+        const mainPanel = document.getElementById('mainPanel');
+        const mediaPanel = document.getElementById('mediaPanel');
+        const openMediaBtn = document.getElementById('openMediaBtn');
+        const backToMainBtn = document.getElementById('backToMainBtn');
+
+        function showMediaSubMenu() {
+            mainPanel.classList.add('-translate-x-full');
+            mediaPanel.classList.remove('translate-x-full');
+        }
+
+        function resetToMainMenu() {
+            mainPanel.classList.remove('-translate-x-full');
+            mediaPanel.classList.add('translate-x-full');
+        }
+
+        function openMenu() {
+            navWrapper.classList.remove('pointer-events-none');
+            navBackdrop.classList.remove('opacity-0');
+            navOverlay.classList.remove('translate-x-full');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeMenu() {
+            navOverlay.classList.add('translate-x-full');
+            navBackdrop.classList.add('opacity-0');
+            document.body.classList.remove('overflow-hidden');
+            
+            setTimeout(() => {
+                navWrapper.classList.add('pointer-events-none');
+                resetToMainMenu();
+            }, 500);
+        }
+
+        if (menuOpenBtn) menuOpenBtn.addEventListener('click', openMenu);
+        if (menuCloseBtn) menuCloseBtn.addEventListener('click', closeMenu);
+        if (navBackdrop) navBackdrop.addEventListener('click', closeMenu);
+
+        if (openMediaBtn) openMediaBtn.addEventListener('click', showMediaSubMenu);
+        if (backToMainBtn) backToMainBtn.addEventListener('click', resetToMainMenu);
+
+        if (mediaPanel) {
+            mediaPanel.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', closeMenu);
+            });
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !navOverlay.classList.contains('translate-x-full')) {
+                closeMenu();
+            }
+        });
+    });
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
